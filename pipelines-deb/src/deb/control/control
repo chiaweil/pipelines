@@ -1,0 +1,9 @@
+Package: [[skil-server.deb.package.name]]
+Version: [[version]]
+Section: misc
+Priority: optional
+Architecture: all
+Maintainer: Skymind <help@skymind.ai>
+Description: Pipelines Package
+Distribution: development
+Depends: openjdk-8-jdk-headless
