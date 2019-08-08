@@ -7,12 +7,13 @@ To install this Python package, run `python setup.py install`. To run any exampl
 
 ```bash
 cd ..
-python build_jar.py -- os <your-platform>
+python build_jar.py --os <your-platform>
 ```
 
-where `<your-platform>` is picked from `windows-x86_64`,`linux-x86_64`,`linux-x86_64-gpu`,
-`macosx-x86_64`, `linux-armhf` and `windows-x86_64-gpu`, depending on your operating system
+where `<your-platform>` is picked from `windows-x86_64`, `linux-x86_64`,
+`macosx-x86_64`, `linux-armhf`, depending on your operating system
 and architecture. 
+Add `--useGpu true` if you want to take advantage of GPU acceleration.
 
 ## Running tests
 
