@@ -76,7 +76,7 @@ Pipelines can run on a wide variety of chips including:
 
 - ARM:       `-Dchip=arm`
 - Intel/X86: `-Dchip=cpu`
-- CUDA:      `-Dchip=cuda`
+- CUDA:      `-Dchip=gpu`
 
 ### Operating systems
 
@@ -107,9 +107,8 @@ In order to configure pipelines for your platform, you use a maven based build p
 An example running on cpu:
 
 ```bash
-./mvnw -Ppython -Dchip=cpu -Pjavacpp.platform=windows-x86_64 -Puberjar clean install -Dmaven.test.skip=true
+./mvnw -Ppython -Ppmml -Dchip=cpu -Djavacpp.platform=windows-x86_64 -Puberjar clean install -Dmaven.test.skip=true
 ```
-
 
 This will automatically download and setup a pipelines uber jar file (see the uber jar sub directory)
 containing all dependencies needed to run the platform.
@@ -124,8 +123,3 @@ profile, and the output will be found in model-server-uber-jar/target.
 
 Every module in this repo is apache license 2.0, save for `pipelines-pmml` 
 which is agpl to comply with the JPML license.
-
-
-
-
-

@@ -252,11 +252,6 @@
             </dependency>
             <dependency>
                 <groupId>org.bytedeco</groupId>
-                <artifactId>mkl-dnn</artifactId>
-                <version>${mkl-dnn.javacpp.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.bytedeco</groupId>
                 <artifactId>numpy</artifactId>
                 <version>${numpy.javacpp.version}</version>
             </dependency>
@@ -497,7 +492,8 @@
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>${maven-javadoc-plugin.version}</version>
                     <configuration>
-                        <additionalparam>-Xdoclint:none</additionalparam>
+                        <doclint>none</doclint>
+                        <source>1.8</source>
                         <quiet>true</quiet>
                     </configuration>
                     <executions>
