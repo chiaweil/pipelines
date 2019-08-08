@@ -19,7 +19,7 @@ if __name__ == '__main__':
     '''
     Example:
 
-    ./build_jar.py --os linux-x86_64
+    ./build_jar.py --os linux-x86_64 --useGpu true
     '''
     parser = argparse.ArgumentParser(description='Build a pipelines JAR.')
 
@@ -35,6 +35,9 @@ if __name__ == '__main__':
                         help='whether to use pmml or not,'
                             ' not encouraged if agpl license is an issue')
 
+    parser.add_argument('--useGpu', type=str, default='false',
+                        help='whether to use CUDA backend or not')
+
     parser.add_argument('--source', type=str,
                         help='the path to the model server',default='.')
 
@@ -46,7 +49,7 @@ if __name__ == '__main__':
     command += ' -Djavacpp.platform=' + args.os + ' '
     if 'arm' in args.os:
         command += '-Dchip=arm'
-    elif 'gpu' in args.os:
+    elif strtobool(args.useGpu):
         command += ' -Dchip=gpu'
     else:
         command += ' -Dchip=cpu'
