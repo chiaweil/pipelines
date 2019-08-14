@@ -42,8 +42,8 @@ def test_server_start():
                     extra_start_args='-Xmx8g',
                     jar_path='pipelines.jar')
     server.start()
-    print('Process started. Sleeping 10 seconds.')
-    time.sleep(4)
+    print('Process started. Sleeping 30 seconds.')
+    time.sleep(30)
     assert is_port_in_use(port)
     print('Done sleeping. Assuming server alive. Killing process.')
     server.stop()

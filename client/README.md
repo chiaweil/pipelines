@@ -7,7 +7,7 @@ To install this Python package, run `python setup.py install`. To run any exampl
 
 ```bash
 cd ..
-python build_jar.py -- os <your-platform>
+python build_jar.py --os <your-platform>
 ```
 
 where `<your-platform>` is picked from `windows-x86_64`,`linux-x86_64`,`linux-x86_64-gpu`,

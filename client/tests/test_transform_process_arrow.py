@@ -56,7 +56,7 @@ def test_build_tp():
     inference = InferenceConfiguration(serving_config=serving_config,
                                        pipeline_steps=[transform_process])
     as_json = json_with_type(inference)
-    InferenceConfigurationJava = autoclass('pipes.pipelines.InferenceConfiguration')
+    InferenceConfigurationJava = autoclass('ai.skymind.pipelines.InferenceConfiguration')
     config = InferenceConfigurationJava.fromJson(json.dumps(as_json))
 
     server = Server(config=inference,
